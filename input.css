@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Inter", sans-serif;
+}
+
+textarea:focus,
+input {
+  background-color: rgba(204, 229, 255, 0.815);
+}
+input:focus {
+  outline: none;
+}
+html {
+  background-color: #020617;
+  min-height: 100vh;
+}
+.welcome-screen {
+  background-image: url("./images/space.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

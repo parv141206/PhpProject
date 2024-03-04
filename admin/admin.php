@@ -25,8 +25,7 @@
         </h1>
         <hr>
         <form method="post">
-            <button type="submit" name="toggle"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button type="submit" name="toggle" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 <?php echo $addUsers ? 'New Note' : 'Add Users'; ?>
             </button>
         </form>

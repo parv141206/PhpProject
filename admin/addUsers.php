@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage users</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../input.css">
+
 </head>
 
 <body class="bg-slate-950 text-slate-200 ">
@@ -15,27 +17,22 @@
     }
     ?>
     <div class="container mx-auto p-3 my-5 flex flex-col gap-5">
-        <hr>
         <h1 class="text-3xl font-extrabold">Add a new member!</h1>
         <form method="POST" class="flex flex-col gap-3 ">
             <div class="flex flex-col md:flex-row gap-3">
 
                 <div class="flex flex-col gap-3">
                     <input type="hidden" name="form_submitted" value="<?php echo time(); ?>">
-                    <input type="text" name="username" id="title" placeholder="Username"
-                        class="input p-3 rounded-xl bg-slate-800 text-slate-200">
-                    <input type="text" name="password" id="note_from" placeholder="Password"
-                        class=" p-3 rounded-xl input bg-slate-800 text-slate-200">
-                    <input type="text" name="role" id="note_from" placeholder="Role(admin/user)"
-                        class=" p-3 rounded-xl input bg-slate-800 text-slate-200">
+                    <input type="text" name="username" id="title" placeholder="Username" class="input p-3 rounded-xl bg-slate-800 text-slate-200">
+                    <input type="text" name="password" id="note_from" placeholder="Password" class=" p-3 rounded-xl input bg-slate-800 text-slate-200">
+                    <input type="text" name="role" id="note_from" placeholder="Role(admin/user)" class=" p-3 rounded-xl input bg-slate-800 text-slate-200">
                 </div>
             </div>
             <div>
-                <input type="submit" value="Post" name="submit"
-                    class="btn px-5 hover:bg-violet-500 p-3 w-auto hover:cursor-pointer rounded-xl bg-violet-700 text-slate-200">
+                <input type="submit" value="Post" name="submit" class="btn px-5 hover:bg-violet-500 p-3 w-auto hover:cursor-pointer rounded-xl bg-violet-700 text-slate-200">
             </div>
         </form>
-        <h1 class="text-3xl font-extrabold">Add a new member,</h1>
+        <h1 class="text-3xl font-extrabold">Delete a member,</h1>
 
         <?php
         if (isset($_POST["submit"]) && isset($_POST["form_submitted"])) {

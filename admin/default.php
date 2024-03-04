@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../input.css">
 
 </head>
 
@@ -17,22 +18,17 @@
         <form method="POST" class="flex flex-col gap-3 ">
             <div class="flex flex-col md:flex-row gap-3">
                 <div class="flex flex-col gap-3">
-                    <textarea name="note" id="note" cols="30" rows="6" placeholder="Note"
-                        class="input p-3 rounded-xl bg-slate-800 text-slate-200"></textarea>
+                    <textarea name="note" id="note" cols="30" rows="6" placeholder="Note" class="input p-3 rounded-xl bg-slate-800 text-slate-200"></textarea>
                 </div>
                 <div class="flex flex-col gap-3">
                     <input type="hidden" name="form_submitted" value="<?php echo time(); ?>">
-                    <input type="text" name="title" id="title" placeholder="Title"
-                        class="input p-3 rounded-xl bg-slate-800 text-slate-200">
-                    <input type="text" name="note_from" id="note_from" placeholder="Note from"
-                        class=" p-3 rounded-xl input bg-slate-800 text-slate-200">
-                    <input type="text" name="sem" id="sem" placeholder="Sem"
-                        class="input p-3 rounded-xl bg-slate-800 text-slate-200">
+                    <input type="text" name="title" id="title" placeholder="Title" class="input p-3 rounded-xl bg-slate-800 text-slate-200">
+                    <input type="text" name="note_from" id="note_from" placeholder="Note from" class=" p-3 rounded-xl input bg-slate-800 text-slate-200">
+                    <input type="text" name="sem" id="sem" placeholder="Sem" class="input p-3 rounded-xl bg-slate-800 text-slate-200">
                 </div>
             </div>
             <div>
-                <input type="submit" value="Post" name="submit"
-                    class="btn px-5 hover:bg-violet-500 p-3 w-auto hover:cursor-pointer rounded-xl bg-violet-700 text-slate-200">
+                <input type="submit" value="Post" name="submit" class="btn px-5 hover:bg-violet-500 p-3 w-auto hover:cursor-pointer rounded-xl bg-violet-700 text-slate-200">
             </div>
         </form>
         <?php
@@ -47,7 +43,6 @@
                 $conn = new mysqli("localhost", "root", "", "project");
                 $conn->query($sql);
 
-                // Unset the $_POST array
                 unset($_POST);
 
                 header("Location: " . $_SERVER['PHP_SELF']);

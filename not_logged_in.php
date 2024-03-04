@@ -15,7 +15,7 @@
         <div class="flex items-center justify-center ">
             <button onclick="location.href='welcome.php'" class=" bg-gradient-to-br from-violet-800 to-purple-500 
              text-slate-200 font-extrabold px-4 py-2 rounded-md hover:from-violet-900 hover:to-purple-600">Login</button>
-    </div>
+        </div>
 </body>
 
 </html>

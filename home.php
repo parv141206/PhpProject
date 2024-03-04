@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./input.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -23,7 +23,7 @@
             include "not_logged_in.php";
         }
     } else {
-        echo "no session";
+        include "not_logged_in.php";
     }
     ?>
 </body>
