@@ -10,8 +10,16 @@
 </head>
 
 <body class="bg-slate-950 text-slate-200 ">
+    <?php
+
+    if ($_SESSION["username"] == "" || !isset($_SESSION["username"])) {
+        header("Location:/project/welcome.php");
+    }
+    ?>
     <div class="container mx-auto p-3 my-5 flex flex-col gap-5">
-        <h1 class="text-3xl font-extrabold">Welcome, <?php echo $_SESSION["username"]; ?></h1>
+        <h1 class="text-3xl font-extrabold">Welcome,
+            <?php echo $_SESSION["username"]; ?>
+        </h1>
         <hr>
         <h1 class="text-3xl font-extrabold">Have a look at the latest updates from VPMP!</h1>
         <div>
@@ -23,7 +31,7 @@
                 if ($result->num_rows > 0) {
                     $i = 0;
                     while ($row = $result->fetch_assoc()) {
-                        
+
                         echo "<div class='bg-slate-900 p-5 flex flex-col gap-3 rounded-3xl shadow-3xl'>";
                         echo "<div class=' text-sm text-violet-200'>" . $row["formatted_date"] . "</div>";
                         echo "<h1 class='text-2xl font-bold'>" . $row["title"] . "</h1>";
