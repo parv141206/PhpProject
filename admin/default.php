@@ -18,7 +18,7 @@
         <form method="POST" class="flex flex-col gap-3 ">
             <div class="flex flex-col md:flex-row gap-3">
                 <div class="flex flex-col gap-3">
-                    <textarea name="note" id="note" cols="30" rows="6" placeholder="Note" class="input p-3 rounded-xl bg-slate-800 text-slate-200"></textarea>
+                    <textarea name="note" id="note" cols="30" rows="6" placeholder="Note" class="input p-3 rounded-xl bg-slate-800 text-slate-200 focus:bg-slate-800 focus:outline-none active:bg-slate-800"></textarea>
                 </div>
                 <div class="flex flex-col gap-3">
                     <input type="hidden" name="form_submitted" value="<?php echo time(); ?>">
